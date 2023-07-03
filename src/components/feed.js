@@ -1,1 +1,1 @@
-//displays a list of cards
+//UI component displays a list of cards

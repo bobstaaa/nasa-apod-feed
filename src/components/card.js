@@ -1,0 +1,1 @@
+// UI component for a normal card

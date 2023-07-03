@@ -1,1 +1,1 @@
-//nav component
+//UI component displays nav and header

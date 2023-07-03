@@ -1,0 +1,1 @@
+// UI components for a double size card

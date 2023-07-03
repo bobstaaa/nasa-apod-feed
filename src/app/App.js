@@ -1,9 +1,7 @@
 import './App.css';
 import {
-  Router,
   Routes,
   Route,
-  NavLink,
 } from 'react-router-dom';
 import Apod from '../features/apod/apod';
 import Donki from '../features/donki/donki'
