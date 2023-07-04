@@ -14,13 +14,19 @@ export const appSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(setInitialState.pending, (state, action) => {
-        })
-        builder.addCase(setInitialState.rejected, (state, action) => {
-        })
-        builder.addCase(setInitialState.fulfilled, (state, action) => {
-        })
+        builder
+            .addCase(setInitialState.pending, (state) => {
+            })
+            .addCase(setInitialState.rejected, (state) => {
+                state.loading = false;
+                return state;
+            })
+            .addCase(setInitialState.fulfilled, (state) => {
+                state.loading = false;
+                return state;
+            })
     }
 })
 
+export const { setLoading } = appSlice.actions
 export default appSlice.reducer;
