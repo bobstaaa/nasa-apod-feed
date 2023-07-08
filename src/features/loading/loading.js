@@ -1,7 +1,7 @@
 //controls state and rendering of components in the home route
 import logo from '../../res/logo.svg';
 
-export default function loading() {
+export default function Loading() {
     return (
         <div className="App">
             <header className="App-header">

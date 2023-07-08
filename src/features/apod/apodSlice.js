@@ -7,4 +7,5 @@ export const apodSlice = createSlice({
     }
 })
 
+export const selectApod = state => state.apod;
 export default apodSlice.reducer;

@@ -6,14 +6,18 @@ import {
 import Apod from '../features/apod/apod';
 import Donki from '../features/donki/donki'
 import Home from '../features/home/home';
+import Navbar from '../components/nav';
 
 function App() {
   return (
-    <Routes>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/apod' element={<Apod />} />
-      <Route exact path='/apod' element={<Donki />} />
-    </Routes>
+    <div className='app'>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/apod' element={<Apod />} />
+        <Route exact path='/donki' element={<Donki />} />
+      </Routes>
+    </div>
   );
 }
 

@@ -8,4 +8,5 @@ export const donkiSlice = createSlice({
     }
 })
 
+export const selectDonki = state => state.donki;
 export default donkiSlice.reducer;
