@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
-import { selectDonki } from "../features/donki/donkiSlice"
-import { selectApod } from "../features/apod/apodSlice"
+import { selectDonki } from "../../features/donki/donkiSlice"
+import { selectApod } from "../../features/apod/apodSlice"
 
 //UI component displays a list of cards
 export default Feed = ({ type }) => {
@@ -11,7 +11,12 @@ export default Feed = ({ type }) => {
     }
     return (
         <div>
+            <div>
 
+            </div>
+            <div>
+
+            </div>
         </div>
     )
 }

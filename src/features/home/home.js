@@ -1,14 +1,19 @@
-import { useDispatch } from "react-redux"
-import { setInitialState } from "../../app/appSlice"
+import { useSelector } from "react-redux"
+import Card from "../../components/card/card"
+import { selectAppLoading, selectHomeCard } from "../../app/appSlice"
+import Loading from "../loading/loading"
 
 //controls state and rendering of components in the home route
 export default function Home() {
-    const dispatch = useDispatch()
+    const loading = useSelector(selectAppLoading)
+    const homeCard = useSelector(selectHomeCard)
 
-    dispatch(setInitialState())
-    return (
-        <div className="App">
-            Home Page
-        </div>
-    )
+    return loading ?
+        <Loading />
+        : (
+            <div className="App">
+                <Card card={homeCard} />
+            </div>
+        )
+
 }

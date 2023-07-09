@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import ROUTES from "../app/routes"
+import ROUTES from "../../app/routes"
+import './nav.css'
 
 //UI component displays nav and header
 export default function Navbar() {

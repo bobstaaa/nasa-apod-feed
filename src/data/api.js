@@ -9,5 +9,5 @@ export const getAPOD = async () => {
     }
     const endpoint = URL + QUERY + '?api_key=' + params.api_key
     const response = await fetch(endpoint)
-    return response.data
+    return await response.json()
 }

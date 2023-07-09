@@ -6,7 +6,7 @@ import {
 import Apod from '../features/apod/apod';
 import Donki from '../features/donki/donki'
 import Home from '../features/home/home';
-import Navbar from '../components/nav';
+import Navbar from '../components/nav/nav';
 
 function App() {
   return (
