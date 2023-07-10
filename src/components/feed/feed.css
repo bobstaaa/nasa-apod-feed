@@ -1,0 +1,12 @@
+.feedContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.feed {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,10 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getAPOD } from "../data/api";
+import { getAPOD, getExtraCards } from "../data/api";
 
 export const setInitialState = createAsyncThunk(
     'app/setInitialState',
-    getAPOD)
+    getAPOD
+)
 
+export const addCards = createAsyncThunk(
+    'app/addCards',
+    getExtraCards
+)
 
 export const appSlice = createSlice({
     name: 'app',
@@ -24,14 +29,17 @@ export const appSlice = createSlice({
                 return state;
             })
             .addCase(setInitialState.fulfilled, (state, action) => {
-                state.card = action.payload
+                state.cards = action.payload
                 state.loading = false;
                 return state;
+            })
+            .addCase(addCards.pending, (state) => {
+                state.addingCards = true;
             })
     }
 })
 
 export const selectAppLoading = state => state.app.loading
-export const selectHomeCard = state => state.app.card
+export const selectCards = state => state.app.cards
 export const { setLoading } = appSlice.actions
 export default appSlice.reducer;

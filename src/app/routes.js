@@ -1,6 +1,6 @@
 const ROUTES = {
     home: () => '/',
-    donki: (id) => id ? `/donki/${id}` : '/donki',
+    rover: (id) => id ? `/rover/${id}` : '/rover',
     apod: (id) => id ? `/apod/${id}` : '/apod'
 }
 

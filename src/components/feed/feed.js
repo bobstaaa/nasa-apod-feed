@@ -1,21 +1,15 @@
 import { useSelector } from "react-redux"
-import { selectDonki } from "../../features/donki/donkiSlice"
-import { selectApod } from "../../features/apod/apodSlice"
+import { selectCards } from "../../app/appSlice"
+import Card from '../card/card'
+import './feed.css'
 
 //UI component displays a list of cards
-export default Feed = ({ type }) => {
-    let items;
-    switch (type) {
-        case 'donki': items = useSelector(selectDonki)
-        case 'apod': items = useSelector(selectApod)
-    }
+export default function Feed() {
+    const cards = useSelector(selectCards)
     return (
-        <div>
-            <div>
-
-            </div>
-            <div>
-
+        <div className="feedContainer">
+            <div className="feed">
+                {cards ? cards.map(card => <Card card={card} />) : 'Sorry something broke'}
             </div>
         </div>
     )

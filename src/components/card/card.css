@@ -1,6 +1,41 @@
 .border {
-    border: 1px solid black;
-    border-radius: 1rem;
-    margin: 2rem;
+    border: 1px solid lightblue;
     overflow: hidden;
+}
+
+.cardTitleBlock {
+    display: inline-flex;
+    align-items: last baseline;
+}
+
+.cardTitleBlock h2 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.cardTitleBlock h3 {
+    padding: 1rem;
+    margin: 0;
+}
+
+p {
+    height: 5rem;
+    padding: 1rem;
+    padding-top: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 24rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }

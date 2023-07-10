@@ -1,13 +1,24 @@
 import { NASA_API_KEY } from "./keys"
-const URL = 'https://api.nasa.gov'
-const QUERY = '/planetary/apod'
+const APOD = 'https://api.nasa.gov/planetary/apod?'
 
 export const getAPOD = async () => {
 
     const params = {
         api_key: NASA_API_KEY,
+        count: 3,
     }
-    const endpoint = URL + QUERY + '?api_key=' + params.api_key
+    const endpoint = APOD + new URLSearchParams(params)
+    const response = await fetch(endpoint)
+    return await response.json()
+}
+
+export const getExtraCards = async () => {
+
+    const params = {
+        api_key: NASA_API_KEY,
+        count: 5,
+    }
+    const endpoint = APOD + new URLSearchParams(params)
     const response = await fetch(endpoint)
     return await response.json()
 }

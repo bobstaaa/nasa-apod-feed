@@ -18,7 +18,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to={ROUTES.donki()}>
+                    <Link to={ROUTES.rover()}>
                         Donki
                     </Link>
                 </li>
