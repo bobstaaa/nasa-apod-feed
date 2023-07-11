@@ -9,7 +9,9 @@ export const getAPOD = async () => {
     }
     const endpoint = APOD + new URLSearchParams(params)
     const response = await fetch(endpoint)
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    }
 }
 
 export const getExtraCards = async () => {
@@ -20,5 +22,7 @@ export const getExtraCards = async () => {
     }
     const endpoint = APOD + new URLSearchParams(params)
     const response = await fetch(endpoint)
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    }
 }

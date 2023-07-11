@@ -13,7 +13,7 @@ export const addCards = createAsyncThunk(
 
 export const appSlice = createSlice({
     name: 'app',
-    initialState: { loading: true },
+    initialState: { loading: true, cards: [], addingCards: false },
     reducers: {
         setLoading: (state, action) => {
             state.app.loading = action.payload;
@@ -35,6 +35,15 @@ export const appSlice = createSlice({
             })
             .addCase(addCards.pending, (state) => {
                 state.addingCards = true;
+            })
+            .addCase(addCards.rejected, (state) => {
+                state.addingCards = false;
+            })
+            .addCase(addCards.fulfilled, (state, action) => {
+                state.addingCards = false;
+                const cards = state.cards
+                state.cards = { ...cards, ...action.payload }
+                return state
             })
     }
 })
